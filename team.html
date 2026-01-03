@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Team - Smile Beauty Center</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #2a2a72;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #2a2a72;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #2a2a72;
+    margin-top: 0;
+}
+
+.category {
+    margin-bottom: 40px;
+}
+
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.member img:hover {
+    transform: scale(1.05);
+}
+
+.member h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.1em;
+    color: #1a1a5a;
+}
+
+.member p {
+    color: #2a2a72;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Popup */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h3 {
+    color: #2a2a72;
+    margin-top: 0;
+}
+
+.popup-content p {
+    color: #333;
+    font-weight: normal;
+    text-align: left;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #2a2a72;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a2a72;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Il Nostro Team</h1>
+    <p>Professionisti al tuo servizio per un sorriso perfetto</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+</nav>
+
+<!-- Operator Sanitari -->
+<section id="operatori" class="category">
+<h2>Operatori Sanitari</h2>
+<div class="members-container">
+
+<!-- Dott. Cultrera -->
+<div class="member" data-name="Dott. Dario Cultrera" data-role="Implantologia e Medicina Estetica" data-desc="Laurea cum Laude presso Università di Catania nel 2020. Master II livello in Chirurgia Implantare e Ossea Ricostruttiva. Vincitore di due borse di studio. Relatore internazionale, ideatore del corso 'My Lips Vision' e fondatore di Smile Beauty Center nel 2024.">
+    <img src="img/dott-cultrera.jpg" alt="Dott. Dario Cultrera">
+    <h3><strong>Dott. Dario Cultrera</strong></h3>
+    <p>Implantologia e Medicina Estetica</p>
+</div>
+
+<!-- Dott.ssa Casella -->
+<div class="member" data-name="Dott.ssa Federica Casella" data-role="Ortodonzia e Gnatologia" data-desc="Laurea cum Laude in Odontoiatria e Protesi Dentaria. Specializzata in Ortognatodonzia con lode. Provider certificata Invisalign e Angelalign. Dedica la sua attività all'Ortodonzia e Gnatologia con aggiornamenti continui.">
+    <img src="img/dott-casella.jpg" alt="Dott.ssa Federica Casella">
+    <h3><strong>Dott.ssa Federica Casella</strong></h3>
+    <p>Ortodonzia e Gnatologia</p>
+</div>
+
+<!-- Dott. Musumeci -->
+<div class="member" data-name="Dott. Francesco Musumeci" data-role="Conservativa e Endodonzia" data-desc="Laurea cum Laude in Odontoiatria. Specializzato in odontoiatria restaurativa, protesica ed endodonzia mini-invasiva. Frequenta corsi di aggiornamento e svolge attività di consulenza in studi odontoiatrici.">
+    <img src="img/dott-musumeci.jpg" alt="Dott. Francesco Musumeci">
+    <h3><strong>Dott. Francesco Musumeci</strong></h3>
+    <p>Conservativa e Endodonzia</p>
+</div>
+
+<!-- Dott.ssa Gentile -->
+<div class="member" data-name="Dott.ssa Giulia Gentile" data-role="Pedodonzia e Conservativa" data-desc="Laurea cum Laude in Odontoiatria e Protesi Dentaria. Specializzando in Ortognatodonzia. Si dedica all'odontoiatria pediatrica e ai trattamenti ortodontici con allineatori invisibili. Guida i più piccoli con consapevolezza nel percorso odontoiatrico.">
+    <img src="img/dott-gentile.jpg" alt="Dott.ssa Giulia Gentile">
+    <h3><strong>Dott.ssa Giulia Gentile</strong></h3>
+    <p>Pedodonzia e Conservativa</p>
+</div>
+
+<!-- Dott.ssa Rossitto -->
+<div class="member" data-name="Dott.ssa Maria Cristina Rossitto" data-role="Igiene Dentale" data-desc="Laurea col massimo dei voti in Igiene Dentale. Master in Parodontologia. Si occupa di igiene dentale, profilassi, prevenzione e trattamento non chirurgico della parodontite. Frequenta continuamente corsi di aggiornamento.">
+    <img src="img/dott-rossitto.jpg" alt="Dott.ssa Maria Cristina Rossitto">
+    <h3><strong>Dott.ssa Maria Cristina Rossitto</strong></h3>
+    <p>Igiene Dentale</p>
+</div>
+
+</div>
+</section>
+
+<!-- Assistenti -->
+<section id="assistenti" class="category">
+<h2>Assistenti</h2>
+<div class="members-container">
+
+<div class="member" data-name="Loredana Tiralongo" data-role="Assistente di Studio Odontoiatrico" data-desc="Empatica, solare e sempre attiva, saprà mettervi a vostro agio fino a farvi quasi dimenticare di essere dal dentista.">
+    <img src="img/loredana-tiralongo.jpg" alt="Loredana Tiralongo">
+    <h3><strong>Loredana Tiralongo</strong></h3>
+    <p>Assistente di Studio Odontoiatrico</p>
+</div>
+
+<div class="member" data-name="Alessandra La Rosa" data-role="Assistente di Studio Odontoiatrico" data-desc="Empatica, dinamica e preparata, accompagna il paziente lungo il cammino odontoiatrico facendolo sentire al sicuro.">
+    <img src="img/alessandra-larosa.jpg" alt="Alessandra La Rosa">
+    <h3><strong>Alessandra La Rosa</strong></h3>
+    <p>Assistente di Studio Odontoiatrico</p>
+</div>
+
+</div>
+</section>
+
+<!-- Segreteria -->
+<section id="segreteria" class="category">
+<h2>Segreteria</h2>
+<div class="members-container">
+
+<div class="member" data-name="Giuliana Sessa" data-role="Amministrazione e Segreteria" data-desc="Rappresenta insieme al Dott. Cultrera le fondamenta dello studio. Organizza le agende e la parte amministrativa, provando a garantire appuntamenti in tempi brevi.">
+    <img src="img/giuliana-sessa.jpg" alt="Giuliana Sessa">
+    <h3><strong>Giuliana Sessa</strong></h3>
+    <p>Amministrazione e Segreteria</p>
+</div>
+
+<div class="member" data-name="Giulia Consales" data-role="Segreteria" data-desc="Empatica e solare, si occupa della segreteria e trova sempre un argomento da affrontare durante la permanenza in sala d'attesa.">
+    <img src="img/giulia-consales.jpg" alt="Giulia Consales">
+    <h3><strong>Giulia Consales</strong></h3>
+    <p>Segreteria</p>
+</div>
+
+<div class="member" data-name="Santi Auricchia" data-role="Direzione Commerciale" data-desc="Direttore commerciale, cura la parte organizzativa ed economica per i pazienti. Ritardatario ma sempre affidabile.">
+    <img src="img/santi-auricchia.jpg" alt="Santi Auricchia">
+    <h3><strong>Santi Auricchia</strong></h3>
+    <p>Direzione Commerciale</p>
+</div>
+
+</div>
+</section>
+
+<!-- Odontotecnici -->
+<section id="odontotecnici" class="category">
+<h2>Odontotecnici</h2>
+<div class="members-container">
+
+<div class="member" data-name="Giuseppe Bongiovanni" data-role="Odontotecnico" data-desc="Odontotecnico di fiducia. Realizza i manufatti protesici usando moderne tecnologie CAD-CAM, mostrando il risultato finale prima della produzione.">
+    <img src="img/giuseppe-bongiovanni.jpg" alt="Giuseppe Bongiovanni">
+    <h3><strong>Giuseppe Bongiovanni</strong></h3>
+    <p>Odontotecnico</p>
+</div>
+
+</div>
+</section>
+
+<!-- Popup -->
+<div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <span class="popup-close" id="popupClose">&times;</span>
+        <h3 id="popupName"></h3>
+        <p id="popupRole"></p>
+        <p id="popupDesc"></p>
+    </div>
+</div>
+
+<footer>
+<p>© 2026 Smile Beauty Center</p>
+</footer>
+
+<script>
+const popup = document.getElementById('popup');
+const popupName = document.getElementById('popupName');
+const popupRole = document.getElementById('popupRole');
+const popupDesc = document.getElementById('popupDesc');
+const popupClose = document.getElementById('popupClose');
+
+document.querySelectorAll('.member').forEach(member => {
+    member.addEventListener('click', () => {
+        popupName.textContent = member.dataset.name;
+        popupRole.textContent = member.dataset.role;
+        popupDesc.textContent = member.dataset.desc;
+        popup.style.display = 'flex';
+    });
+});
+
+popupClose.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+popup.addEventListener('click', e => {
+    if (e.target === popup) popup.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

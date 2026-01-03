@@ -1,52 +1,212 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Studio Dentistico Sorriso</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Smile Beauty Center</title>
+<style>
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    display: flex;
+    background: linear-gradient(to bottom, #ffffff, #f5f0e6);
+    color: #333;
+}
+
+/* BARRA LATERALE SINISTRA */
+.sidebar {
+    width: 220px;
+    background-color: #2a2a72;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+}
+
+.sidebar h2 {
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* CONTENUTO PRINCIPALE */
+.main-content {
+    margin-left: 240px;
+    padding: 40px 20px;
+    max-width: 1000px;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    color: #2a2a72;
+}
+
+header p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-style: italic;
+    color: #1a1a5a;
+}
+
+/* FOTO PRINCIPALE TEAM */
+.home-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* MISSION */
+.mission {
+    background-color: #e0e0ff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #1a1a5a;
+}
+
+/* CATEGORIE E SERVIZI */
+.category {
+    margin-bottom: 40px;
+}
+
+.category h2 {
+    color: #2a2a72;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.category ul {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* CONTATTI CENTRATI IN BASSO */
+.contacts {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contacts h3 {
+    color: #2a2a72;
+}
+
+.contacts p {
+    color: #333;
+}
+
+/* LINK WHATSAPP */
+.whatsapp-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.whatsapp-link:hover {
+    background-color: #1ebe57;
+}
+</style>
 </head>
 <body>
 
-<header>
-    <h1>Studio Dentistico Sorriso</h1>
-    <p>La salute del tuo sorriso è la nostra priorità</p>
-</header>
+<div class="sidebar">
+    <h2>Menu</h2>
+    <a href="team.html">Team</a>
+    <a href="servizi.html">Servizi</a>
+    <a href="contatti.html">Contatti</a>
+    <a class="whatsapp-link" href="https://wa.me/393279055805?text=Vorrei%20prenotare%20una%20visita" target="_blank">Prenota la tua visita</a>
+    <p>WhatsApp: <strong>327 9055805</strong></p>
+</div>
 
-<nav>
-    <a href="#chi-siamo">Chi siamo</a>
-    <a href="#servizi">Servizi</a>
-    <a href="#contatti">Contatti</a>
-</nav>
+<div class="main-content">
+    <header>
+        <h1>Smile Beauty Center</h1>
+        <p>Dove la Passione incontra l'Arte!</p>
+    </header>
 
-<section id="chi-siamo">
-    <h2>Chi siamo</h2>
-    <p>
-        Lo Studio Dentistico Sorriso offre cure dentali professionali,
-        moderne e attente al benessere del paziente.
-    </p>
-</section>
+    <!-- Foto principale team -->
+    <img src="img/team-gruppo.jpg" alt="Foto del Team Smile Beauty Center" class="home-photo">
 
-<section id="servizi">
-    <h2>I nostri servizi</h2>
-    <ul>
-        <li>Igiene e prevenzione</li>
-        <li>Otturazioni</li>
-        <li>Ortodonzia</li>
-        <li>Implantologia</li>
-        <li>Sbiancamento dentale</li>
-    </ul>
-</section>
+    <!-- Mission -->
+    <section class="mission">
+        <h2>La nostra mission</h2>
+        <p>
+        Noi di Smile Beauty abbiamo l'obiettivo chiaro e mai banale di farti sentire a casa! Dimentica di pensare al dentista come quella figura enigmatica e quasi odiosa del passato. Da noi non esiste dolore, non esiste "anestesia che non funziona" e non esistono trattamenti procrastinati. Proponiamo un'Odontoiatria Moderna, minimamente invasiva, rapida ed efficace grazie a tecnologie avanzate come Radiografici Panoramici Digitali, TAC CBCT 3D, Scanner per impronte digitali e macchinari all'avanguardia per la profilassi. Inoltre, grazie alle moderne tecniche di Medicina Estetica del Viso, i nostri pazienti ritrovano benessere e sorriso!
+        </p>
+    </section>
 
-<section id="contatti">
-    <h2>Contatti</h2>
-    <p>📍 Via Roma 10, Milano</p>
-    <p>📞 Tel: 0123 456789</p>
-    <p>📧 Email: info@studiodentisticosorriso.it</p>
-</section>
+    <!-- Categorie con elenco servizi -->
+    <section class="category">
+        <h2>Odontoiatria</h2>
+        <ul>
+            <li>Prevenzione, Igiene e Profilassi</li>
+            <li>Implantologia a Carico Immediato</li>
+            <li>Parodontologia</li>
+            <li>Ortodonzia Invisibile con Allineatori Trasparenti</li>
+            <li>Chirurgia Orale</li>
+            <li>Gnatologia</li>
+            <li>Protesi Fissa e Mobile</li>
+            <li>Endodonzia e Conservativa</li>
+            <li>Faccette Dentali e Odontoiatria Altamente Estetica</li>
+        </ul>
+    </section>
 
-<footer>
-    <p>© 2026 Studio Dentistico Sorriso</p>
-</footer>
+    <section class="category">
+        <h2>Medicina Estetica del Viso</h2>
+        <ul>
+            <li>Medicina Rigenerativa Anti-aging</li>
+            <li>Filler Labbra e Viso</li>
+            <li>Protocollo Full Face</li>
+            <li>Rinofiller</li>
+            <li>Biorimodellamento</li>
+            <li>Profiloplastica non chirurgica</li>
+            <li>Biorivitalizzazione con e senza aghi</li>
+            <li>Trattamento conservativo occhiaie</li>
+            <li>Trattamento con Radiesse</li>
+        </ul>
+    </section>
+
+    <!-- Contatti in basso e centrati -->
+    <section class="contacts">
+        <h3>Contatti</h3>
+        <p>Via Ugo Lago 43 - Noto (SR)</p>
+        <p>Tel: 327 9055805 | 0931 1967641</p>
+        <p>Email: smilebeauty.noto@gmail.com</p>
+        <p>PEC: cultreramedicalgroupsrl@pec.it</p>
+    </section>
+
+</div>
 
 </body>
 </html>
